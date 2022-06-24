@@ -1,0 +1,315 @@
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, button,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* open-sans-300 - latin_cyrillic */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local(''),
+         url('../fonts/open-sans-v29-latin_cyrillic-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/open-sans-v29-latin_cyrillic-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* open-sans-regular - latin_cyrillic */
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/open-sans-v29-latin_cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/open-sans-v29-latin_cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* open-sans-500 - latin_cyrillic */
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: local(''),
+         url('../fonts/open-sans-v29-latin_cyrillic-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/open-sans-v29-latin_cyrillic-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* open-sans-600 - latin_cyrillic */
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: local(''),
+         url('../fonts/open-sans-v29-latin_cyrillic-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/open-sans-v29-latin_cyrillic-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* open-sans-700 - latin_cyrillic */
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+         url('../fonts/open-sans-v29-latin_cyrillic-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/open-sans-v29-latin_cyrillic-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* open-sans-800 - latin_cyrillic */
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 800;
+    src: local(''),
+         url('../fonts/open-sans-v29-latin_cyrillic-800.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/open-sans-v29-latin_cyrillic-800.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+  html{
+     box-sizing: border-box;
+  }
+
+  *, *::before, *::after{
+     box-sizing: inherit;
+  }
+
+body{
+     font-family: 'Open Sans';
+     font-style: normal;
+     font-size: 16px;
+     line-height: 1.2;
+     font-weight: normal;
+     color: black;
+}
+
+img {
+   max-width: 100%;
+   height: auto;
+}
+
+/*header styles start*/
+  .header{
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 81px;
+     background: rgba(41, 162, 140, 0.11);
+     
+  }
+
+ .header__wrapper{
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+     justify-content: space-between;
+     margin-top: 14px;
+     margin-left: 75px;
+     margin-right: 70px;
+  }
+  
+  .header__logo-link{
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   }
+
+   .header__logo-link img:first-of-type{
+   margin-right: 11px;
+   }
+
+  .header__list{
+     display: flex;
+     flex-wrap: wrap;
+  }
+
+  .header__item{
+   margin-right: 30px;
+  }
+  .header__item:last-child{
+   margin-right: 0;
+  }
+
+  .header__link{
+   font-size: 18px;
+   line-height: 25px;
+   color: #FFFFFF;
+   text-decoration: none;
+  }
+  .header__link:hover, .header__link:focus, .header__link:active{
+   opacity: 0.75;
+  }
+  /*header styles end*/
+
+  /*intro styles start*/
+
+.intro{
+   min-height: 100vh;
+   background: url(../image/bg_foto.png)  no-repeat center;
+   background-size: cover;
+   padding-top: 223px;
+}
+
+.intro__wrapper{
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   /*justify-content: center;*/
+   flex-direction: column;
+
+}
+
+.intro__title{
+font-weight: 300;
+font-size: 47px;
+line-height: 64px;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+color: #FFFFFF;
+max-width: 864px;
+margin-bottom: 52px;
+text-align: center;
+}
+
+.intro__button-consultation{
+   padding: 12px 38px;
+   color: #FFFFFF;
+   background: rgba(0, 153, 125, 0.79);
+   border-radius: 43px;
+   margin-bottom: 56px;
+}
+
+.intro__button-consultation:hover, .intro__button-consultation:focus, .intro__button-consultation:active{
+   background: rgba(2, 90, 74, 0.79);
+}
+
+.intro__scroll-icon{
+   height: 54px;
+   width: 32px;
+}
+.intro__scroll-icon:hover, .intro__scroll-icon:focus, .intro__scroll-icon:active{
+   filter: invert(18%) sepia(64%) saturate(3542%) hue-rotate(166deg) brightness(94%) contrast(101%);
+}
+
+  /*intro styles end*/
+
+  /*numbers styles start*/
+
+  .numbers{
+   /*min-height: 100vh;*/
+   padding: 100px 200px;
+  }
+/*
+  .numbers__cards{
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   
+  }
+  .number__card{
+   border-right: 3px solid #29A28C;
+   padding: 0 75.5px;
+   }
+
+
+   .number__card:last-child{
+   border-right: none;
+   padding-right: 0px;
+   }
+
+   .number__card:first-child{
+   padding-left: 0px;
+      }
+
+
+  .number__card-title{
+   font-weight: 600;
+   font-size: 48px;
+   line-height: 65px;
+   letter-spacing: 0.08em
+  }
+
+  .number__card-desc{
+   line-height: 22px;
+   letter-spacing: 0.02em;
+   text-transform: lowercase;
+   
+  }*/
+
+
+  .numbers__cards{
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
+  }
+
+  .number__card{
+   border-right: 3px solid #29A28C;
+   padding: 0 75.5px;
+   text-align: center;
+   }
+
+
+   .number__card:last-child{
+   border-right: none;
+   padding-right: 0px;
+   }
+
+   .number__card:first-child{
+   padding-left: 0px;
+      }
+
+
+  .number__card-title{
+   font-weight: 600;
+   font-size: 48px;
+   line-height: 65px;
+   letter-spacing: 0.08em;
+   margin-bottom: 5px;
+  }
+/* в 2 первых р росстояние слева и справа есть, в 3,4 нет*/
+  .number__card-desc{
+   line-height: 22px;
+   letter-spacing: 0.02em;
+   text-transform: lowercase;
+   
+  }
